@@ -1,0 +1,23 @@
+    
+    <script type="text/javascript">
+  function getObj(id){
+        var Obj = document.getElementById(id).value;
+          return Obj;
+   }  
+   function check(){  
+   if(getObj("sqlString")==""){  
+   alert("文本框输入为空，不能提交表单！");  
+   document.getElementById("test").focus;
+   return false;//false:阻止提交表单
+         }  
+   }
+ </script>
+    <form action="query.do" method="post" onclick="check()" >
+		<p align="center">input SQL </p>
+		<br/> 
+		输入 SQL : <br/>
+		<input type="text" name="sqlString"  style= "width:800px;height=600px " />
+		<br/>
+		<input type="submit" value="SUBMIT" name="submit" /> 
+		<input type="reset" value="RESET" name="reset" />
+	</form>
